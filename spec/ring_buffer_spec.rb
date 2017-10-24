@@ -1,4 +1,5 @@
 require "ring_buffer"
+require 'byebug'
 
 describe RingBuffer do
   it "starts out empty" do
@@ -56,7 +57,7 @@ describe RingBuffer do
 
   it "can store more than 8 items" do
     arr = RingBuffer.new
-
+    # byebug
     16.times { |i| arr.unshift(i) }
 
     16.times { |i| expect(arr[i]).to eq(15-i) }
