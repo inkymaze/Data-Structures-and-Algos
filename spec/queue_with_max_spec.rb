@@ -1,4 +1,5 @@
 require 'queue_with_max'
+require 'byebug'
 
 describe QueueWithMax do
   it "enqueues" do
@@ -43,7 +44,7 @@ describe QueueWithMax do
 
   it 'returns the correct max while enqueuing and dequeuing' do
     q = QueueWithMax.new
-
+    # byebug
    q.enqueue(6) # [6]
     expect(q.max).to eq(6)
 

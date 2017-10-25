@@ -66,9 +66,13 @@ class RingBuffer
   end
 
 
+  def last
+    self[@length-1]
+  end
 
-
-
+  def first
+    self[0]
+  end
 
   protected
   attr_accessor :capacity, :store, :start_location
